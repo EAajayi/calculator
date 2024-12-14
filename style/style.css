@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d1d5db; /* Light macOS-like background */
+    color: #333;
+}
+
+.calculator {
+    background: #b0b3b8; /* MacOS calculator body color */
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    text-align: right;
+    border: none;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background: #000; /* Dark screen */
+    color: #0fff0f; /* Green text like macOS */
+    outline: none;
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    background: #d6d7d9; /* Light button color */
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.operator {
+    background: #fe9c23; /* Orange for operators */
+    color: #fff;
+}
+
+.operator:active {
+    background: #e58b1f;
+}
+
+#equals {
+    background: #00c900; /* Green equals button */
+    color: #fff;
+    grid-column: span 4;
+    font-size: 24px;
+}
+
+#equals:active {
+    background: #009900;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
